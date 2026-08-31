@@ -11,7 +11,6 @@ from __future__ import annotations
 from typing import Any
 
 from core.domain.types.evidence import record_evidence_entry
-from core.tool import EvidenceType, SideEffectLevel
 from core.tool_framework import tool
 from core.tool_framework.utils import tool_unavailable
 
@@ -321,8 +320,6 @@ def query_grafana_annotations(
 
 
 from core.tool_framework import tool
-from infrastructure.evidence.evidence_compaction import summarize_counts
-from infrastructure.evidence.log_compaction import build_error_taxonomy, deduplicate_logs
 from integrations.grafana.client import get_grafana_client_from_credentials
 from integrations.grafana.tools._helpers import (
     GRAFANA_RUNTIME_PARAMS,
